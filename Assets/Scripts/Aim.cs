@@ -21,7 +21,7 @@ public class Aim : MonoBehaviour
     // Invoked when the value of the slider changes.
     public void ValueChangeCheck()
     {
-        Gun.transform.rotation = Quaternion.Euler(0.0F, 0.0F, 90.0F * (1.0F - AimSlider.value));
+        Gun.transform.rotation = Quaternion.Euler(0.0F, 0.0F, -90.0F * AimSlider.value);
     }
     // ================================================================================== //
 }
