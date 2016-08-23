@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Fire : MonoBehaviour 
 {
+    public GameObject Smoke;
+
     public AudioClip FireSound;
     public AudioClip HitDroneSound;
     // ================================================================================== //
@@ -25,12 +27,19 @@ public class Fire : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.right);
         if (hit.collider != null)
         {
-            hit.collider.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1.0F;
-            hit.collider.gameObject.GetComponent<DroneAI>().enabled = false;
+            if (hit.collider.gameObject.GetComponent<DroneAI>() != null)
+            {
+                GameObject smoke = Instantiate(Smoke) as GameObject;
+                smoke.transform.position = hit.collider.transform.position;
+                smoke.transform.parent = hit.collider.transform;
 
-            hitPos = hit.point;
+                hit.collider.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1.0F;
+                hit.collider.gameObject.GetComponent<DroneAI>().enabled = false;
 
-            AudioSource.PlayClipAtPoint(HitDroneSound, Camera.main.transform.position);
+                hitPos = hit.point;
+
+                AudioSource.PlayClipAtPoint(HitDroneSound, Camera.main.transform.position);
+            }
         }
 
         if (hitPos == Vector3.zero)
