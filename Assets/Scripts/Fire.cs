@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Fire : MonoBehaviour 
 {
+    public AudioClip FireSound;
+    public AudioClip HitDroneSound;
     // ================================================================================== //
 	void Start () 
     {
@@ -16,6 +18,8 @@ public class Fire : MonoBehaviour
     // ================================================================================== //
     public void ExecuteFire()
     {
+        AudioSource.PlayClipAtPoint(FireSound, Camera.main.transform.position);
+
         Vector3 hitPos = Vector3.zero;
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.right);
@@ -25,6 +29,8 @@ public class Fire : MonoBehaviour
             hit.collider.gameObject.GetComponent<DroneAI>().enabled = false;
 
             hitPos = hit.point;
+
+            AudioSource.PlayClipAtPoint(HitDroneSound, Camera.main.transform.position);
         }
 
         if (hitPos == Vector3.zero)
