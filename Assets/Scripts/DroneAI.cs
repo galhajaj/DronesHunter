@@ -19,6 +19,7 @@ public class DroneAI : MonoBehaviour
     {
         _timeToSwitchPosition -= Time.deltaTime;
         moveToPosition();
+        //hover();
 
         if (_timeToSwitchPosition <= 0.0F)
         {
@@ -36,7 +37,7 @@ public class DroneAI : MonoBehaviour
     // ================================================================================== //
     private void hover()
     {
-        //Random
+        //transform.position = new Vector3(transform.position.x + Random.Range(-0.1F, 0.1F), transform.position.y + Random.Range(-0.1F, 0.1F));
     }
     // ================================================================================== //
 }

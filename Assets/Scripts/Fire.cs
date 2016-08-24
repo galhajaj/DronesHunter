@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+using System;
 using System.Collections;
 
 public class Fire : MonoBehaviour 
@@ -7,6 +9,10 @@ public class Fire : MonoBehaviour
 
     public AudioClip FireSound;
     public AudioClip HitDroneSound;
+
+    public Text ScoreText;
+    public Slider TimeSlider;
+    private float _score = 0.0F;
     // ================================================================================== //
 	void Start () 
     {
@@ -15,7 +21,7 @@ public class Fire : MonoBehaviour
     // ================================================================================== //
 	void Update () 
     {
-
+        ScoreText.text = "Score: " + _score.ToString("F2");
 	}
     // ================================================================================== //
     public void ExecuteFire()
@@ -23,6 +29,8 @@ public class Fire : MonoBehaviour
         AudioSource.PlayClipAtPoint(FireSound, Camera.main.transform.position);
 
         Vector3 hitPos = Vector3.zero;
+
+        bool isHit = false;
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.right);
         if (hit.collider != null)
@@ -34,6 +42,10 @@ public class Fire : MonoBehaviour
                 smoke.transform.parent = hit.collider.transform;
 
                 hit.collider.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1.0F;
+
+                if (hit.collider.gameObject.GetComponent<DroneAI>().isActiveAndEnabled)
+                    isHit = true;
+
                 hit.collider.gameObject.GetComponent<DroneAI>().enabled = false;
 
                 hitPos = hit.point;
@@ -46,6 +58,17 @@ public class Fire : MonoBehaviour
             DrawLine(transform.position, -transform.right * 100.0F, Color.yellow, 0.02F, 0.05F);
         else
             DrawLine(transform.position, hitPos, Color.yellow, 0.02F, 0.05F);
+
+        if (isHit)
+        {
+            _score += 1.0F;
+            if (TimeSlider.value < 5.0F)
+                _score -= (5.0F - TimeSlider.value) * 0.15F;
+        }
+        else
+        {
+            _score -= 0.25F;
+        }
     }
     // ================================================================================== //
     void DrawLine(Vector3 start, Vector3 end, Color color, float width, float duration = 0.2f)
