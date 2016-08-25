@@ -13,6 +13,7 @@ public class Fire : MonoBehaviour
     public Text ScoreText;
     public Slider TimeSlider;
     private float _score = 0.0F;
+    //public float Score{ get { return _score; } }
     // ================================================================================== //
 	void Start () 
     {
@@ -21,7 +22,18 @@ public class Fire : MonoBehaviour
     // ================================================================================== //
 	void Update () 
     {
-        ScoreText.text = "Score: " + _score.ToString("F2");
+        ScoreText.text = "Score: " + (_score * 10.0F).ToString("F1")+"%";
+
+        // change color of text
+        string levelType = PlayerPrefs.GetString("LevelType");
+        if (PlayerPrefs.GetFloat(levelType + "BestScore") < _score)
+        {
+            ScoreText.color = Color.yellow;
+        }
+        else
+        {
+            ScoreText.color = Color.white;
+        }
 	}
     // ================================================================================== //
     public void ExecuteFire()

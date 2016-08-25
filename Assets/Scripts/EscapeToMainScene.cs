@@ -19,9 +19,9 @@ public class EscapeToMainScene : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            float score = (float)Convert.ToDouble(ScoreText.text.Split(':')[1].Trim());
+            /*float score = (float)Convert.ToDouble(ScoreText.text.Split(':')[1].Trim());
             if (PlayerPrefs.GetFloat("BestScore") < score)
-                PlayerPrefs.SetFloat("BestScore", score);
+                PlayerPrefs.SetFloat("BestScore", score);*/
             
             SceneManager.LoadScene("mainScene");
         }

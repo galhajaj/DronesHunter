@@ -24,7 +24,7 @@ public class DroneAI : MonoBehaviour
         if (_timeToSwitchPosition <= 0.0F)
         {
             _timeToSwitchPosition = Random.Range(1.0F, 5.0F);
-            _randomPosition = new Vector2(Random.Range(-7.0F, 7.0F), Random.Range(-1.0F, 4.0F));
+            _randomPosition = new Vector2(Random.Range(-7.0F, 6.5F), Random.Range(-1.0F, 4.0F));
 
             //hover();
         }
