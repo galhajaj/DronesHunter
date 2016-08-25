@@ -26,7 +26,7 @@ public class Fire : MonoBehaviour
 
         // change color of text
         string levelType = PlayerPrefs.GetString("LevelType");
-        if (PlayerPrefs.GetFloat(levelType + "BestScore") < _score)
+        if (PlayerPrefs.GetFloat(levelType + "BestScore") <= _score)
         {
             ScoreText.color = Color.yellow;
         }
@@ -54,6 +54,8 @@ public class Fire : MonoBehaviour
                 smoke.transform.parent = hit.collider.transform;
 
                 hit.collider.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1.0F;
+
+                hit.collider.gameObject.GetComponent<SpriteRenderer>().enabled = true;
 
                 if (hit.collider.gameObject.GetComponent<DroneAI>().isActiveAndEnabled)
                     isHit = true;

@@ -9,10 +9,15 @@ public class DroneAI : MonoBehaviour
     private Vector2 _randomPosition;
 
     private float _timeToSwitchPosition = 0.0F;
+
+    private float _visibilityStateTime = 0.0F;
+    private bool _isVisible;
     // ================================================================================== //
 	void Start () 
     {
         _initPosition = transform.position;
+
+        _isVisible = (Random.Range(0, 2) == 0);
 	}
     // ================================================================================== //
 	void Update () 
@@ -27,6 +32,23 @@ public class DroneAI : MonoBehaviour
             _randomPosition = new Vector2(Random.Range(-7.0F, 6.5F), Random.Range(-1.0F, 4.0F));
 
             //hover();
+        }
+
+        if (PlayerPrefs.GetString("LevelType") == "Invisible")
+        {
+            if (_visibilityStateTime > 0.0F)
+            {
+                _visibilityStateTime -= Time.deltaTime;
+            }
+            else
+            {
+                _visibilityStateTime = Random.Range(0.0F, 2.0F);
+                _isVisible = !_isVisible;
+                if (_isVisible)
+                    this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                else
+                    this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            }
         }
 	}
     // ================================================================================== //
