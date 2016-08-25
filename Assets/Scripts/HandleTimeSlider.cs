@@ -7,8 +7,10 @@ using UnityEngine.SceneManagement;
 public class HandleTimeSlider : MonoBehaviour 
 {
     public Slider TimeSlider;
+    public Image TimeSliderFill;
     public Text ScoreText;
     public Button FireButton;
+    public GameObject BestScoreParticles;
     // ================================================================================== //
 	void Start () 
     {
@@ -17,7 +19,13 @@ public class HandleTimeSlider : MonoBehaviour
     // ================================================================================== //
 	void Update () 
     {
-        TimeSlider.value -= Time.deltaTime;
+        if (Time.timeSinceLevelLoad > 3.0F)
+            TimeSlider.value -= Time.deltaTime;
+
+        if (TimeSlider.value < 5.0F)
+        {
+            TimeSliderFill.color = Color.yellow;
+        }
 
         if (TimeSlider.value <= 0.0F)
         {
@@ -29,6 +37,7 @@ public class HandleTimeSlider : MonoBehaviour
             float score = (float)(Convert.ToDouble(ScoreText.text.Split(':')[1].Trim('%').Trim()) / 10.0F);
             if (PlayerPrefs.GetFloat(levelType + "BestScore") < score)
             {
+                BestScoreParticles.SetActive(true);
                 PlayerPrefs.SetFloat(levelType + "BestScore", score);
             }
 
