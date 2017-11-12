@@ -5,8 +5,10 @@ public class DroneAI : MonoBehaviour
 {
     public float Speed;
 
+    private string _levelTitle;
+
     private Vector2 _initPosition;
-    private Vector2 _randomPosition;
+    public Vector2 RandomPosition;
 
     private float _timeToSwitchPosition = 0.0F;
 
@@ -15,10 +17,18 @@ public class DroneAI : MonoBehaviour
     // ================================================================================== //
 	void Start () 
     {
+        _levelTitle = PlayerPrefs.GetString("LevelType");
+
         _initPosition = transform.position;
 
         _isVisible = (Random.Range(0, 2) == 0);
-	}
+
+        if (_levelTitle == "Static")
+            Speed = 0;
+
+        if (_levelTitle == "Fast")
+            Speed *= 2;
+    }
     // ================================================================================== //
 	void Update () 
     {
@@ -26,15 +36,22 @@ public class DroneAI : MonoBehaviour
         moveToPosition();
         //hover();
 
+        if (_levelTitle == "Skeet")
+            return;
+
         if (_timeToSwitchPosition <= 0.0F)
         {
             _timeToSwitchPosition = Random.Range(1.0F, 5.0F);
-            _randomPosition = new Vector2(Random.Range(-7.0F, 6.5F), Random.Range(-1.0F, 4.0F));
+
+            if (_levelTitle == "Fast")
+                _timeToSwitchPosition = Random.Range(0.25F, 1.5F);
+
+            RandomPosition = new Vector2(Random.Range(-7.0F, 6.5F), Random.Range(-1.0F, 4.0F));
 
             //hover();
         }
 
-        if (PlayerPrefs.GetString("LevelType") == "Invisible")
+        if (_levelTitle == "Invisible")
         {
             if (_visibilityStateTime > 0.0F)
             {
@@ -54,7 +71,7 @@ public class DroneAI : MonoBehaviour
     // ================================================================================== //
     private void moveToPosition()
     {
-        transform.position = Vector3.MoveTowards(transform.position, _randomPosition, Speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, RandomPosition, Speed * Time.deltaTime);
     }
     // ================================================================================== //
     private void hover()
