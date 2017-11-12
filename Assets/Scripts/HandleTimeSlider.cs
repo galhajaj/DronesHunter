@@ -42,6 +42,9 @@ public class HandleTimeSlider : MonoBehaviour
             }
 
             //SceneManager.LoadScene("mainScene");
+
+            // sky to red
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>().backgroundColor = new Color(45/255, 7/255, 8/255, 1.0F);
         }
 	}
     // ================================================================================== //
