@@ -24,7 +24,7 @@ public class DroneProperties : MonoBehaviour
             this.gameObject.AddComponent<BoxCollider2D>();
         }
 
-        if (_levelTitle == "Impossible")
+        if (_levelTitle == "Tiny")
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = SmallDroneSprite;
             Destroy(this.gameObject.GetComponent<BoxCollider2D>());

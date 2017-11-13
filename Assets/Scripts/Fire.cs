@@ -109,26 +109,16 @@ void Update ()
 
         if (isHit)
         {
-            if (isTargetAndHitBomb)
-            {
-                _score -= 1.0F;
-            }
-            else
+            if (!isTargetAndHitBomb)
             {
                 float scoreToAdd = 1.0F;
                 if (TimeSlider.value < 5.0F && _levelTitle != "Skeet")
                     scoreToAdd -= (5.0F - TimeSlider.value) * 0.15F;
                 addToScore(scoreToAdd);
-                //_score += 1.0F;
-                //addToScore(1.0F);
-                //if (TimeSlider.value < 5.0F && _levelTitle != "Skeet")
-                    //addToScore(-(5.0F - TimeSlider.value) * 0.15F);
-                    //_score -= (5.0F - TimeSlider.value) * 0.15F;
             }
         }
         else
         {
-            //_score -= 0.25F;
             addToScore(-0.25F);
         }
     }
@@ -173,16 +163,9 @@ void Update ()
             if (TimeSlider.value < 5.0F)
                 scoreToAdd -= hitCount * (5.0F - TimeSlider.value) * 0.15F;
             addToScore(scoreToAdd);
-
-            //_score += hitCount * 1.0F;
-            //addToScore(hitCount * 1.0F);
-            //if (TimeSlider.value < 5.0F)
-                //addToScore(-hitCount * (5.0F - TimeSlider.value) * 0.15F);
-                //_score -= hitCount * (5.0F - TimeSlider.value) * 0.15F;
         }
         else
         {
-            //_score -= 0.25F;
             addToScore(-0.25F);
         }
     }
