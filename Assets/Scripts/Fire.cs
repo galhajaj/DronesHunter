@@ -69,7 +69,7 @@ void Update ()
                         List<GameObject> bombsDrones = new List<GameObject>();
                         foreach (GameObject drn in GameObject.FindGameObjectsWithTag("DroneTag"))
                         {
-                            if (!drn.GetComponent<DroneProperties>().IsTarget)
+                            if (!drn.GetComponent<DroneProperties>().IsTarget && drn.GetComponent<Rigidbody2D>().gravityScale != 1.0F)
                             {
                                 bombsDrones.Add(drn);
                             }
