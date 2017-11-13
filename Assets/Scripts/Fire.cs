@@ -12,6 +12,7 @@ public class Fire : MonoBehaviour
     public AudioClip HitDroneSound;
 
     public Text ScoreText;
+    public Text BonusScoreText;
     public Slider TimeSlider;
     private float _score = 0.0F;
 
@@ -21,9 +22,10 @@ public class Fire : MonoBehaviour
     void Start () 
     {
         _levelTitle = PlayerPrefs.GetString("LevelType");
+        BonusScoreText.text = "";
     }
-    // ================================================================================== //
-	void Update () 
+// ================================================================================== //
+void Update () 
     {
         ScoreText.text = "Score: " + (_score * 10.0F).ToString("F1")+"%";
 
@@ -113,14 +115,21 @@ public class Fire : MonoBehaviour
             }
             else
             {
-                _score += 1.0F;
+                float scoreToAdd = 1.0F;
                 if (TimeSlider.value < 5.0F && _levelTitle != "Skeet")
-                    _score -= (5.0F - TimeSlider.value) * 0.15F;
+                    scoreToAdd -= (5.0F - TimeSlider.value) * 0.15F;
+                addToScore(scoreToAdd);
+                //_score += 1.0F;
+                //addToScore(1.0F);
+                //if (TimeSlider.value < 5.0F && _levelTitle != "Skeet")
+                    //addToScore(-(5.0F - TimeSlider.value) * 0.15F);
+                    //_score -= (5.0F - TimeSlider.value) * 0.15F;
             }
         }
         else
         {
-            _score -= 0.25F;
+            //_score -= 0.25F;
+            addToScore(-0.25F);
         }
     }
     // ================================================================================== //
@@ -160,13 +169,21 @@ public class Fire : MonoBehaviour
 
         if (hitCount > 0)
         {
-            _score += hitCount * 1.0F;
+            float scoreToAdd = hitCount * 1.0F;
             if (TimeSlider.value < 5.0F)
-                _score -= hitCount * (5.0F - TimeSlider.value) * 0.15F;
+                scoreToAdd -= hitCount * (5.0F - TimeSlider.value) * 0.15F;
+            addToScore(scoreToAdd);
+
+            //_score += hitCount * 1.0F;
+            //addToScore(hitCount * 1.0F);
+            //if (TimeSlider.value < 5.0F)
+                //addToScore(-hitCount * (5.0F - TimeSlider.value) * 0.15F);
+                //_score -= hitCount * (5.0F - TimeSlider.value) * 0.15F;
         }
         else
         {
-            _score -= 0.25F;
+            //_score -= 0.25F;
+            addToScore(-0.25F);
         }
     }
     // ================================================================================== //
@@ -182,6 +199,29 @@ public class Fire : MonoBehaviour
         lr.SetPosition(0, start);
         lr.SetPosition(1, end);
         GameObject.Destroy(myLine, duration);
+    }
+    // ================================================================================== //
+    private void addToScore(float bonus)
+    {
+        _score += bonus;
+        StartCoroutine("addToScoreCoroutine", bonus);
+    }
+    // ================================================================================== //
+    private IEnumerator addToScoreCoroutine(float bonus)
+    {
+        string plus = "";
+        if (bonus > 0.0F)
+        {
+            plus = "+";
+            BonusScoreText.color = Color.green;
+        }
+        else
+        {
+            BonusScoreText.color = Color.red;
+        }
+        BonusScoreText.text = plus + (10 * bonus).ToString("F1") + "%";
+        yield return new WaitForSeconds(1.0F);
+        BonusScoreText.text = "";
     }
     // ================================================================================== //
 }
