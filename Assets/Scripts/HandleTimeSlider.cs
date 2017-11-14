@@ -11,9 +11,12 @@ public class HandleTimeSlider : MonoBehaviour
     public Text ScoreText;
     public Button FireButton;
     public GameObject BestScoreParticles;
+
+    private string _levelTitle;
     // ================================================================================== //
-	void Start () 
+    void Start () 
     {
+        _levelTitle = PlayerPrefs.GetString("LevelType");
         TimeSlider.value = 10.0F;// + PlayerPrefs.GetFloat("TimeBonus");
 	}
     // ================================================================================== //
@@ -22,9 +25,9 @@ public class HandleTimeSlider : MonoBehaviour
         if (Time.timeSinceLevelLoad > 3.0F)
             TimeSlider.value -= Time.deltaTime;
 
-        if (TimeSlider.value < 5.0F)
+        if (TimeSlider.value < 5.0F && _levelTitle != "Skeet")
         {
-            TimeSliderFill.color = Color.yellow;
+            TimeSliderFill.color = Color.red;//.yellow;
         }
 
         if (TimeSlider.value <= 0.0F)
