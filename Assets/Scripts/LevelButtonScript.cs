@@ -33,6 +33,7 @@ public class LevelButtonScript : MonoBehaviour
             float scoreOfPrerequisite = PlayerPrefs.GetFloat(Prerequisite + "BestScore");
             if (scoreOfPrerequisite < 5.0F)
             {
+                GetComponent<Button>().enabled = false;
                 GetComponent<Image>().sprite = LockLevelSprite;
                 _textTitle.text = "???";
                 _textScore.text = "";
