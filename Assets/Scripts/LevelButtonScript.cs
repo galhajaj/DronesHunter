@@ -8,6 +8,7 @@ public class LevelButtonScript : MonoBehaviour
 {
     public string Title = "";
     public string Prerequisite = "";
+    public Sprite LockLevelSprite;
 
     private Text _textScore;
     private Text _textTitle;
@@ -25,6 +26,20 @@ public class LevelButtonScript : MonoBehaviour
 
         Title = _textTitle.text;
         _score = PlayerPrefs.GetFloat(Title + "BestScore");
+        
+        // if prerequisite not met
+        if (Prerequisite != "")
+        {
+            float scoreOfPrerequisite = PlayerPrefs.GetFloat(Prerequisite + "BestScore");
+            if (scoreOfPrerequisite < 5.0F)
+            {
+                GetComponent<Image>().sprite = LockLevelSprite;
+                _textTitle.text = "???";
+                _textScore.text = "";
+                return;
+            }
+        }
+
         TotalScore.Instance.AddToScore(_score);
         _textScore.text = (_score * 10.0F).ToString("F1") + "%";
 
