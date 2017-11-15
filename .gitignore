@@ -7,3 +7,6 @@ Obj/*
 *.userprefs
 *.csproj
 *.orig
+*.apk
+*.exe
+.vs/*
