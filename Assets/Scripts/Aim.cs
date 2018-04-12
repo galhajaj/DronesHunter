@@ -15,7 +15,21 @@ public class Aim : MonoBehaviour
 	// ================================================================================== //
 	void Update () 
     {
+        // oscilation
         /*AimSlider.value = Mathf.Abs(Mathf.Sin(Mathf.Deg2Rad * Time.time * 50.0F));*/
+
+        // joystick
+        /*LayerMask layerMask = (1 << LayerMask.NameToLayer("JoystickLayer"));
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 0.0F, layerMask);
+
+        if (!hit)
+            return;
+        if (hit.collider == null)
+            return;
+
+        var dir = transform.position - (Vector3)hit.point;
+        var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        Gun.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);*/
     }
     // ================================================================================== //
     // Invoked when the value of the slider changes.
