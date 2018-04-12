@@ -15,8 +15,8 @@ public class Aim : MonoBehaviour
 	// ================================================================================== //
 	void Update () 
     {
-	    
-	}
+        /*AimSlider.value = Mathf.Abs(Mathf.Sin(Mathf.Deg2Rad * Time.time * 50.0F));*/
+    }
     // ================================================================================== //
     // Invoked when the value of the slider changes.
     public void ValueChangeCheck()

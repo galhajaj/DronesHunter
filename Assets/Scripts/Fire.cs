@@ -85,6 +85,9 @@ void Update ()
                     }
                 }
 
+                // force
+                hit.rigidbody.AddForceAtPosition(200.0F * -transform.right, hit.point);
+
                 GameObject smoke = Instantiate(Smoke) as GameObject;
                 smoke.transform.position = hit.collider.transform.position;
                 smoke.transform.parent = hit.collider.transform;
