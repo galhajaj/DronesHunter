@@ -57,7 +57,9 @@ void Update ()
 
         bool isHit = false;
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.right);
+        LayerMask layerMask = (1 << LayerMask.NameToLayer("DronesLayer"));
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.right, 1000.0F, layerMask);
+
         if (hit.collider != null)
         {
             if (hit.collider.gameObject.GetComponent<DroneAI>() != null)
@@ -90,6 +92,7 @@ void Update ()
                 hit.collider.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1.0F;
 
                 hit.collider.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                hit.collider.gameObject.layer = LayerMask.NameToLayer("DestroyedDronesLayer");
 
                 if (hit.collider.gameObject.GetComponent<DroneAI>().isActiveAndEnabled)
                     isHit = true;
@@ -144,6 +147,7 @@ void Update ()
                     hit.collider.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1.0F;
 
                     hit.collider.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                    hit.collider.gameObject.layer = LayerMask.NameToLayer("DestroyedDronesLayer");
 
                     if (hit.collider.gameObject.GetComponent<DroneAI>().isActiveAndEnabled)
                         hitCount++;
