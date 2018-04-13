@@ -68,4 +68,9 @@ public class DebugButtons : MonoBehaviour
             SceneManager.LoadScene("mainScene");
         }
     }
+
+    public void AddAmmo()
+    {
+        DataManager.Instance.Ammo += 15;
+    }
 }

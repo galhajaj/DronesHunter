@@ -43,6 +43,11 @@ void Update ()
     // ================================================================================== //
     public void ExecuteFire()
     {
+        // ammo handling
+        if (DataManager.Instance.Ammo <= 0)
+            return;
+        DataManager.Instance.Ammo--;
+
         bool isTargetAndHitBomb = false;
 
         AudioSource.PlayClipAtPoint(FireSound, Camera.main.transform.position);
