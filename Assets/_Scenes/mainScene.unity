@@ -352,7 +352,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ddd34a46d6c60b6458dfa6baccd2ea10,
+      objectReference: {fileID: 21300000, guid: 4d4da88133864254aa98dd6d8b15af3f,
         type: 3}
     - target: {fileID: 114607789466553450, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
@@ -369,6 +369,12 @@ Prefab:
       propertyPath: Title
       value: Target
       objectReference: {fileID: 0}
+    - target: {fileID: 114625209682867516, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
+        type: 2}
+      propertyPath: LevelData
+      value: 
+      objectReference: {fileID: 11400000, guid: 78a5fe16bbb07d94cb3ea8b62e85d3ee,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
   m_IsPrefabParent: 0
@@ -820,7 +826,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 7083f97c6e0ddcc498bfa664184ae0c5,
+      objectReference: {fileID: 21300000, guid: 4d4da88133864254aa98dd6d8b15af3f,
         type: 3}
     - target: {fileID: 114625209682867516, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
@@ -960,7 +966,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3da26aff53597454da50312146820cc5,
+      objectReference: {fileID: 21300000, guid: 4d4da88133864254aa98dd6d8b15af3f,
         type: 3}
     - target: {fileID: 114607789466553450, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
@@ -1293,7 +1299,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 7caf18cc784fafa48a3f32ec00c15f7f,
+      objectReference: {fileID: 21300000, guid: 4d4da88133864254aa98dd6d8b15af3f,
         type: 3}
     - target: {fileID: 114607789466553450, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
@@ -1434,6 +1440,12 @@ Prefab:
       propertyPath: m_Text
       value: Easy
       objectReference: {fileID: 0}
+    - target: {fileID: 114625209682867516, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
+        type: 2}
+      propertyPath: LevelData
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c93caad4256bb840bdb1ee9aa7ca71b,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
   m_IsPrefabParent: 0
@@ -1448,7 +1460,7 @@ GameObject:
   - component: {fileID: 854406448}
   - component: {fileID: 854406447}
   m_Layer: 5
-  m_Name: Text
+  m_Name: TextCaption
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2340,7 +2352,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f256834031b71d34cbe0cecb1e80909f,
+      objectReference: {fileID: 21300000, guid: 4d4da88133864254aa98dd6d8b15af3f,
         type: 3}
     - target: {fileID: 114625209682867516, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
@@ -2651,7 +2663,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0665db0ae6c59d14e807be835e628228,
+      objectReference: {fileID: 21300000, guid: 4d4da88133864254aa98dd6d8b15af3f,
         type: 3}
     - target: {fileID: 114625209682867516, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
@@ -2663,6 +2675,12 @@ Prefab:
       propertyPath: Title
       value: Skeet
       objectReference: {fileID: 0}
+    - target: {fileID: 114625209682867516, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
+        type: 2}
+      propertyPath: LevelData
+      value: 
+      objectReference: {fileID: 11400000, guid: f70f272ae2de8fc429c1e0ba142a68cf,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
   m_IsPrefabParent: 0
@@ -2786,7 +2804,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a9a40bed706dbbc4392f1f806545e779,
+      objectReference: {fileID: 21300000, guid: 4d4da88133864254aa98dd6d8b15af3f,
         type: 3}
     - target: {fileID: 114607789466553450, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
@@ -2803,6 +2821,18 @@ Prefab:
       propertyPath: Title
       value: Static
       objectReference: {fileID: 0}
+    - target: {fileID: 114625209682867516, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
+        type: 2}
+      propertyPath: LevelData
+      value: 
+      objectReference: {fileID: 11400000, guid: cf0a97f275c3c5e418bb8987e2b498b8,
+        type: 2}
+    - target: {fileID: 114041784770579460, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ddc157af104cef14c9dbf2f1cf4ccf6d,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
   m_IsPrefabParent: 0
@@ -2897,7 +2927,7 @@ GameObject:
   - component: {fileID: 1868909470}
   - component: {fileID: 1868909469}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: PanelButtons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3107,7 +3137,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e9c0ba5c34248fa4aa8429072367648c,
+      objectReference: {fileID: 21300000, guid: 4d4da88133864254aa98dd6d8b15af3f,
         type: 3}
     - target: {fileID: 114607789466553450, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}

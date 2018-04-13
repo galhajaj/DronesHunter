@@ -53,10 +53,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224528221899331388}
+  - component: {fileID: 114625209682867516}
   - component: {fileID: 222018436786465798}
   - component: {fileID: 114199666810124418}
   - component: {fileID: 114065537902011778}
-  - component: {fileID: 114625209682867516}
   m_Layer: 5
   m_Name: LevelButton
   m_TagString: LevelButtonTag
@@ -264,6 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b64131aeea422847af8d8e47be2b2a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelData: {fileID: 0}
   Title: 
   Prerequisite: 
   LockLevelSprite: {fileID: 21300000, guid: 38a5c01493077bd4d8dae0151b1b8b46, type: 3}

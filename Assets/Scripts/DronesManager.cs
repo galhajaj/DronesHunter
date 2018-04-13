@@ -6,24 +6,34 @@ public class DronesManager : MonoBehaviour
 {
     private GameObject[] _drones;
     private List<Vector3> _targetPositions = new List<Vector3>();
-    private string _levelTitle;
+
+    private LevelData _levelData;
 
     void Start ()
     {
-        _levelTitle = PlayerPrefs.GetString("LevelType");
-        _drones = GameObject.FindGameObjectsWithTag("DroneTag");
+        _levelData = DataManager.Instance.CurrentLevelData;
 
-        if (_levelTitle == "Skeet")
+        // create drones
+        _drones = new GameObject[_levelData.NumberOfDrones];
+        for (int i = 0; i < _levelData.NumberOfDrones; ++i)
         {
-            for (int i = 0; i < 10; ++i)
+            Vector3 randomPosition = Utils.GetRandomPositionInsideGameArea();
+            _drones[i] = Instantiate(_levelData.Drones[0], randomPosition, Quaternion.identity);
+        }
+
+        // drones formation - "two at a time"
+        if (_levelData.FormationType == LevelData.DronesFormationType.TWO_AT_A_TIME)
+        {
+            for (int i = 0; i < _levelData.NumberOfDrones; ++i)
             {
                 _drones[i].transform.position = new Vector2(-10000.0F, -10000.0F);
                 _drones[i].GetComponent<DroneAI>().RandomPosition = new Vector2(9.0F, Random.Range(-1.0F, 4.0F));
             }
-            StartCoroutine(SkeetDronesCoroutine());
+            StartCoroutine(TwoAtATimeDronesCoroutine());
         }
 
-        if (_levelTitle == "Target")
+        // only one target
+        if (_levelData.IsOnlyOneTargetAtATime)
         {
             int rand = Random.Range(0, 10);
             _drones[rand].GetComponent<DroneProperties>().IsTarget = true;
@@ -35,7 +45,7 @@ public class DronesManager : MonoBehaviour
         
     }
 
-    IEnumerator SkeetDronesCoroutine()
+    IEnumerator TwoAtATimeDronesCoroutine()
     {
         yield return new WaitForSeconds(3.0F);
         for (int i = 0; i < 10; i+=2)

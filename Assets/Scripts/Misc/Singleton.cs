@@ -10,7 +10,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
         if (Instance != null)
         {
-            Debug.LogError("A instance already exists");
+            //Debug.LogError("A instance already exists");
             Destroy(this); //Or GameObject as appropriate
             return;
         }

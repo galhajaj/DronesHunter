@@ -4,8 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class LevelButtonScript : MonoBehaviour
+public class LevelButton : MonoBehaviour
 {
+    public LevelData LevelData;
+
     public string Title = "";
     public string Prerequisite = "";
     public Sprite LockLevelSprite;
@@ -59,6 +61,8 @@ public class LevelButtonScript : MonoBehaviour
 
     public void StartLevel()
     {
+        DataManager.Instance.CurrentLevelData = LevelData;
+
         PlayerPrefs.SetString("LevelType", Title);
         SceneManager.LoadScene("huntScene");
     }
