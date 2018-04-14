@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 61153930354631452}
   - component: {fileID: 50487153699066570}
   - component: {fileID: 114111778387440200}
-  - component: {fileID: 114188874939797292}
   - component: {fileID: 114440263157909734}
   m_Layer: 8
   m_Name: PooglyDrone
@@ -101,31 +100,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 137c475a37caf6d48ab183e87ebb6384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0
+  _speed: 0
   RandomPosition: {x: 0, y: 0}
---- !u!114 &114188874939797292
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1961696511864074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7e05528fb0add0488454d1a0919e91f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BigDroneSprite: {fileID: 21300000, guid: a3f645c63e9138c4b8277abbeb795e57, type: 3}
-  SmallDroneSprite: {fileID: 21300000, guid: abbf69ae17b5cdc418ee007bab6365d8, type: 3}
-  TargetDroneSprite: {fileID: 21300000, guid: 950c1c1d70dce0746afc845518fe8017, type: 3}
-  BombDroneSprite: {fileID: 21300000, guid: bc96d308571600e42ab567956a34280e, type: 3}
-  IsTarget: 0
+  _smokePrefab: {fileID: 100000, guid: 921a3ff88856fe04ebc86b196fd8cc59, type: 2}
+  _switchPositionMinTime: 1
+  _switchPositionMaxTime: 5
+  _isGotInvisibility: 0
+  _invisibilityMinTime: 0
+  _invisibilityMaxTime: 2
+  _isTarget: 0
+  _isPiercable: 0
+  _isFloating: 1
+  _floatingAmplitude: 0.005
+  _floatingFrequency: 0.5
 --- !u!114 &114440263157909734
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1961696511864074}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79a0db3c7d2fdab4ab1841d1b9c9f31f, type: 3}
   m_Name: 

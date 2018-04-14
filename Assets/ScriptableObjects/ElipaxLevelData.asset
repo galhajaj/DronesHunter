@@ -11,5 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323bbc9948f5bbd4081f2841c2c74711, type: 3}
   m_Name: ElipaxLevelData
   m_EditorClassIdentifier: 
+  LevelNumber: 1
+  FormationType: 0
+  IsOnlyOneTargetAtATime: 0
+  NumberOfDrones: 10
   Drones:
   - {fileID: 1870031949409796, guid: 6e6e9d3efd2fdab44870d7031fa4076c, type: 2}
+  IsContainHalfTimePenalty: 1

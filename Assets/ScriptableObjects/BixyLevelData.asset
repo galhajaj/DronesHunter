@@ -11,8 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323bbc9948f5bbd4081f2841c2c74711, type: 3}
   m_Name: BixyLevelData
   m_EditorClassIdentifier: 
+  LevelNumber: 5
   FormationType: 0
   IsOnlyOneTargetAtATime: 0
   NumberOfDrones: 10
   Drones:
   - {fileID: 153588, guid: b4dacd78cd2f4e547aa2a49d35d48033, type: 2}
+  IsContainHalfTimePenalty: 1

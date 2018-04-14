@@ -9,6 +9,12 @@ public class DataManager : Singleton<DataManager>
 
     public LevelData CurrentLevelData { get; set; }
 
+    public int TopLevelUnlocked
+    {
+        get { return PlayerPrefs.GetInt("TopLevelUnlocked"); }
+        set { PlayerPrefs.SetInt("TopLevelUnlocked", value); }
+    }
+
     public int Ammo
     {
         get { return PlayerPrefs.GetInt("Ammo"); }

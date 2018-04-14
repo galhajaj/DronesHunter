@@ -22,12 +22,12 @@ public class DronesManager : MonoBehaviour
         }
 
         // drones formation - "two at a time"
-        if (_levelData.FormationType == LevelData.DronesFormationType.TWO_AT_A_TIME)
+        if (_levelData.FormationType == DronesFormationType.TWO_AT_A_TIME)
         {
             for (int i = 0; i < _levelData.NumberOfDrones; ++i)
             {
                 _drones[i].transform.position = new Vector2(-10000.0F, -10000.0F);
-                _drones[i].GetComponent<DroneAI>().RandomPosition = new Vector2(9.0F, Random.Range(-1.0F, 4.0F));
+                _drones[i].GetComponent<Drone>().RandomPosition = new Vector2(9.0F, Random.Range(-1.0F, 4.0F));
             }
             StartCoroutine(TwoAtATimeDronesCoroutine());
         }
@@ -36,7 +36,7 @@ public class DronesManager : MonoBehaviour
         if (_levelData.IsOnlyOneTargetAtATime)
         {
             int rand = Random.Range(0, 10);
-            _drones[rand].GetComponent<DroneProperties>().IsTarget = true;
+            _drones[rand].GetComponent<Drone>().IsTarget = true;
         }
     }
 	

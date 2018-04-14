@@ -11,8 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323bbc9948f5bbd4081f2841c2c74711, type: 3}
   m_Name: PooglyLevelData
   m_EditorClassIdentifier: 
+  LevelNumber: 2
   FormationType: 0
   IsOnlyOneTargetAtATime: 0
   NumberOfDrones: 10
   Drones:
   - {fileID: 1961696511864074, guid: b704653b7e6ca594ea3aff9005e4095e, type: 2}
+  IsContainHalfTimePenalty: 1

@@ -12,4 +12,8 @@ public class Consts : Singleton<Consts>
     public Color BLACK_TEXT;
     public Color GOLD_TEXT;
     public Color MAGENTA_TEXT;
+    [Header("Numbers...")]
+    public float SCORE_TO_PASS_LEVEL;
+    public float GREAT_SCORE;
+    public float PERFECT_SCORE;
 }

@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 61077891964840458}
   - component: {fileID: 50934667315720498}
   - component: {fileID: 114284172155881640}
-  - component: {fileID: 114452938202386964}
   m_Layer: 8
   m_Name: ElipaxDrone
   m_TagString: DroneTag
@@ -100,24 +99,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 137c475a37caf6d48ab183e87ebb6384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 3
+  _speed: 3
   RandomPosition: {x: 0, y: 0}
---- !u!114 &114452938202386964
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1870031949409796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7e05528fb0add0488454d1a0919e91f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BigDroneSprite: {fileID: 21300000, guid: a3f645c63e9138c4b8277abbeb795e57, type: 3}
-  SmallDroneSprite: {fileID: 21300000, guid: abbf69ae17b5cdc418ee007bab6365d8, type: 3}
-  TargetDroneSprite: {fileID: 21300000, guid: 950c1c1d70dce0746afc845518fe8017, type: 3}
-  BombDroneSprite: {fileID: 21300000, guid: bc96d308571600e42ab567956a34280e, type: 3}
-  IsTarget: 0
+  _smokePrefab: {fileID: 100000, guid: 921a3ff88856fe04ebc86b196fd8cc59, type: 2}
+  _switchPositionMinTime: 1
+  _switchPositionMaxTime: 5
+  _isGotInvisibility: 0
+  _invisibilityMinTime: 0
+  _invisibilityMaxTime: 2
+  _isTarget: 0
+  _isPiercable: 0
 --- !u!212 &212124849355920396
 SpriteRenderer:
   m_ObjectHideFlags: 1

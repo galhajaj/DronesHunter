@@ -229,6 +229,12 @@ Prefab:
       propertyPath: m_Text
       value: Normal
       objectReference: {fileID: 0}
+    - target: {fileID: 114625209682867516, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
+        type: 2}
+      propertyPath: LevelData
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c93caad4256bb840bdb1ee9aa7ca71b,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
   m_IsPrefabParent: 0
@@ -838,6 +844,12 @@ Prefab:
       propertyPath: Title
       value: Piercing
       objectReference: {fileID: 0}
+    - target: {fileID: 114625209682867516, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
+        type: 2}
+      propertyPath: LevelData
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c93caad4256bb840bdb1ee9aa7ca71b,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
   m_IsPrefabParent: 0
@@ -983,6 +995,12 @@ Prefab:
       propertyPath: Title
       value: Invisible
       objectReference: {fileID: 0}
+    - target: {fileID: 114625209682867516, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
+        type: 2}
+      propertyPath: LevelData
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c93caad4256bb840bdb1ee9aa7ca71b,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
   m_IsPrefabParent: 0
@@ -1316,6 +1334,12 @@ Prefab:
       propertyPath: Title
       value: Tiny
       objectReference: {fileID: 0}
+    - target: {fileID: 114625209682867516, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
+        type: 2}
+      propertyPath: LevelData
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c93caad4256bb840bdb1ee9aa7ca71b,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
   m_IsPrefabParent: 0
@@ -2041,6 +2065,7 @@ GameObject:
   - component: {fileID: 1104558735}
   - component: {fileID: 1104558733}
   - component: {fileID: 1104558734}
+  - component: {fileID: 1104558728}
   m_Layer: 5
   m_Name: Persistents
   m_TagString: Untagged
@@ -2048,6 +2073,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1104558728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1104558727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1044a6c16ddba6849b663d3d846a96ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FireSound: {fileID: 8300000, guid: ef73ea2d9bdcc604c9cc63110676bf27, type: 3}
+  HitDroneSound: {fileID: 8300000, guid: b3a4192dfa32b7c498fb88f80e7497dd, type: 3}
+  EmptyGunSound: {fileID: 8300000, guid: 01bb8024bd11e704b975c19719ef01d9, type: 3}
 --- !u!224 &1104558730
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2094,6 +2133,9 @@ MonoBehaviour:
   BLACK_TEXT: {r: 0, g: 0, b: 0, a: 1}
   GOLD_TEXT: {r: 0.94482756, g: 1, b: 0, a: 1}
   MAGENTA_TEXT: {r: 1, g: 0, b: 0.84827566, a: 1}
+  SCORE_TO_PASS_LEVEL: 5
+  GREAT_SCORE: 8.5
+  PERFECT_SCORE: 10
 --- !u!114 &1104558735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2364,6 +2406,12 @@ Prefab:
       propertyPath: Title
       value: Mix
       objectReference: {fileID: 0}
+    - target: {fileID: 114625209682867516, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
+        type: 2}
+      propertyPath: LevelData
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c93caad4256bb840bdb1ee9aa7ca71b,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
   m_IsPrefabParent: 0
@@ -3154,6 +3202,12 @@ Prefab:
       propertyPath: Title
       value: Fast
       objectReference: {fileID: 0}
+    - target: {fileID: 114625209682867516, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
+        type: 2}
+      propertyPath: LevelData
+      value: 
+      objectReference: {fileID: 11400000, guid: acc8109e6f8abfc4c89291b2ecef0659,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
   m_IsPrefabParent: 0

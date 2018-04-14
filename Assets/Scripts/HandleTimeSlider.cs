@@ -11,12 +11,9 @@ public class HandleTimeSlider : MonoBehaviour
     public Text ScoreText;
     public Button FireButton;
     public GameObject BestScoreParticles;
-
-    private string _levelTitle;
     // ================================================================================== //
     void Start () 
     {
-        _levelTitle = PlayerPrefs.GetString("LevelType");
         TimeSlider.value = 10.0F;// + PlayerPrefs.GetFloat("TimeBonus");
 	}
     // ================================================================================== //
@@ -25,7 +22,7 @@ public class HandleTimeSlider : MonoBehaviour
         if (Time.timeSinceLevelLoad > 3.0F)
             TimeSlider.value -= Time.deltaTime;
 
-        if (TimeSlider.value < 5.0F && _levelTitle != "Skeet")
+        if (TimeSlider.value < 5.0F && DataManager.Instance.CurrentLevelData.IsContainHalfTimePenalty)
         {
             TimeSliderFill.color = Color.red;//.yellow;
         }
@@ -36,12 +33,18 @@ public class HandleTimeSlider : MonoBehaviour
             FireButton.enabled = false;
             FireButton.GetComponent<Image>().color = Color.black;
 
+            // handle score
             string levelType = PlayerPrefs.GetString("LevelType");
             float score = (float)(Convert.ToDouble(ScoreText.text.Split(':')[1].Trim('%').Trim()) / 10.0F);
             if (PlayerPrefs.GetFloat(levelType + "BestScore") < score)
             {
                 BestScoreParticles.SetActive(true);
                 PlayerPrefs.SetFloat(levelType + "BestScore", score);
+
+                // pass level
+                if (score >= Consts.Instance.SCORE_TO_PASS_LEVEL)
+                    if (DataManager.Instance.CurrentLevelData.LevelNumber > DataManager.Instance.TopLevelUnlocked)
+                        DataManager.Instance.TopLevelUnlocked = DataManager.Instance.CurrentLevelData.LevelNumber;
             }
 
             //SceneManager.LoadScene("mainScene");
