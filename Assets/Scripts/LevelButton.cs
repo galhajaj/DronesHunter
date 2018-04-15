@@ -56,6 +56,6 @@ public class LevelButton : MonoBehaviour
     public void StartLevel()
     {
         DataManager.Instance.CurrentLevelData = LevelData;
-        SceneManager.LoadScene("huntScene");
+        SceneManager.LoadScene("Hunt");
     }
 }

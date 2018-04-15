@@ -20,7 +20,7 @@ public class CheckEscapeKey : MonoBehaviour
             if (_result == EscapeResult.EXIT_GAME)
                 Application.Quit();
             else if (_result == EscapeResult.MOVE_TO_MAIN_SCENE)
-                SceneManager.LoadScene("mainScene");
+                SceneManager.LoadScene("Main");
         }
 	}
 }

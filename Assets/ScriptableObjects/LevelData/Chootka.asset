@@ -9,12 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 323bbc9948f5bbd4081f2841c2c74711, type: 3}
-  m_Name: BixyLevelData
+  m_Name: Chootka
   m_EditorClassIdentifier: 
-  LevelNumber: 5
+  LevelNumber: 8
   FormationType: 0
   IsOnlyOneTargetAtATime: 0
   NumberOfDrones: 10
   Drones:
-  - {fileID: 153588, guid: b4dacd78cd2f4e547aa2a49d35d48033, type: 2}
+  - {fileID: 1475152997711578, guid: 15bc3b1c080222d46a69bc0f96f391dc, type: 2}
   IsContainHalfTimePenalty: 1

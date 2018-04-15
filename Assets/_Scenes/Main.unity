@@ -212,7 +212,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1240728711505376, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
       propertyPath: m_Name
-      value: NormalButton
+      value: MoonkaButton
       objectReference: {fileID: 0}
     - target: {fileID: 114625209682867516, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
@@ -227,13 +227,13 @@ Prefab:
     - target: {fileID: 114607789466553450, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
       propertyPath: m_Text
-      value: Normal
+      value: Moonka
       objectReference: {fileID: 0}
     - target: {fileID: 114625209682867516, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
       propertyPath: LevelData
       value: 
-      objectReference: {fileID: 11400000, guid: 2c93caad4256bb840bdb1ee9aa7ca71b,
+      objectReference: {fileID: 11400000, guid: 3253d710eae3cba4a97f0d24c71210b2,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
@@ -352,7 +352,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1240728711505376, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
       propertyPath: m_Name
-      value: TargetButton
+      value: BixyButton
       objectReference: {fileID: 0}
     - target: {fileID: 114199666810124418, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
@@ -821,12 +821,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1240728711505376, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
       propertyPath: m_Name
-      value: PiercingButton
+      value: PuffyButton
       objectReference: {fileID: 0}
     - target: {fileID: 114607789466553450, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
       propertyPath: m_Text
-      value: Piercing
+      value: Puffy
       objectReference: {fileID: 0}
     - target: {fileID: 114199666810124418, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
@@ -848,7 +848,7 @@ Prefab:
         type: 2}
       propertyPath: LevelData
       value: 
-      objectReference: {fileID: 11400000, guid: 2c93caad4256bb840bdb1ee9aa7ca71b,
+      objectReference: {fileID: 11400000, guid: a53c4fd9b877124448bc8697baef05b0,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
@@ -1094,7 +1094,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1240728711505376, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
       propertyPath: m_Name
-      value: InvisibleButton
+      value: CamillaButton
       objectReference: {fileID: 0}
     - target: {fileID: 114199666810124418, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
@@ -1105,7 +1105,7 @@ Prefab:
     - target: {fileID: 114607789466553450, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
       propertyPath: m_Text
-      value: Invisible
+      value: Camilla
       objectReference: {fileID: 0}
     - target: {fileID: 114625209682867516, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
@@ -1121,7 +1121,7 @@ Prefab:
         type: 2}
       propertyPath: LevelData
       value: 
-      objectReference: {fileID: 11400000, guid: 2c93caad4256bb840bdb1ee9aa7ca71b,
+      objectReference: {fileID: 11400000, guid: 6c928960247a34e47aedcd6c65491930,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
@@ -1355,7 +1355,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: TrophiesScene
+          m_StringArgument: Trophies
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -1507,7 +1507,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1240728711505376, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
       propertyPath: m_Name
-      value: TinyButton
+      value: FlooxyButton
       objectReference: {fileID: 0}
     - target: {fileID: 114199666810124418, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
@@ -1518,7 +1518,7 @@ Prefab:
     - target: {fileID: 114607789466553450, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
       propertyPath: m_Text
-      value: Tiny
+      value: Flooxy
       objectReference: {fileID: 0}
     - target: {fileID: 114625209682867516, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
@@ -1534,7 +1534,7 @@ Prefab:
         type: 2}
       propertyPath: LevelData
       value: 
-      objectReference: {fileID: 11400000, guid: 2c93caad4256bb840bdb1ee9aa7ca71b,
+      objectReference: {fileID: 11400000, guid: 9ff9b7edc8c469c499707cf9ccd2eccb,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
@@ -1643,7 +1643,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1240728711505376, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
       propertyPath: m_Name
-      value: EasyButton
+      value: ElipaxButton
       objectReference: {fileID: 0}
     - target: {fileID: 114625209682867516, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
@@ -1658,7 +1658,7 @@ Prefab:
     - target: {fileID: 114607789466553450, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
       propertyPath: m_Text
-      value: Olipax
+      value: Elipax
       objectReference: {fileID: 0}
     - target: {fileID: 114625209682867516, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
@@ -2579,12 +2579,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1240728711505376, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
       propertyPath: m_Name
-      value: MixButton
+      value: SurkaButton
       objectReference: {fileID: 0}
     - target: {fileID: 114607789466553450, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
       propertyPath: m_Text
-      value: Mix
+      value: Surka
       objectReference: {fileID: 0}
     - target: {fileID: 114199666810124418, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
@@ -2606,7 +2606,7 @@ Prefab:
         type: 2}
       propertyPath: LevelData
       value: 
-      objectReference: {fileID: 11400000, guid: 2c93caad4256bb840bdb1ee9aa7ca71b,
+      objectReference: {fileID: 11400000, guid: ddcea07066c72234a8e3d3ad5c9fd0a9,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
@@ -2983,7 +2983,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1240728711505376, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
       propertyPath: m_Name
-      value: SkeetButton
+      value: SkeetyButton
       objectReference: {fileID: 0}
     - target: {fileID: 114607789466553450, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
@@ -3129,7 +3129,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1240728711505376, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
       propertyPath: m_Name
-      value: StaticButton
+      value: PooglyButton
       objectReference: {fileID: 0}
     - target: {fileID: 114199666810124418, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}
@@ -3462,7 +3462,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1240728711505376, guid: 5753d73f92b3ae34cb65ecf3dd17b212, type: 2}
       propertyPath: m_Name
-      value: FastButton
+      value: ChootkaButton
       objectReference: {fileID: 0}
     - target: {fileID: 114199666810124418, guid: 5753d73f92b3ae34cb65ecf3dd17b212,
         type: 2}

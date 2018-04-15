@@ -527,7 +527,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: huntScene
+          m_StringArgument: Hunt
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -592,9 +592,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92358b38a2501544aa7890510b2e7ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Smoke: {fileID: 100000, guid: 921a3ff88856fe04ebc86b196fd8cc59, type: 2}
-  FireSound: {fileID: 8300000, guid: ef73ea2d9bdcc604c9cc63110676bf27, type: 3}
-  HitDroneSound: {fileID: 8300000, guid: b3a4192dfa32b7c498fb88f80e7497dd, type: 3}
   ScoreText: {fileID: 1879881296}
   BonusScoreText: {fileID: 920718834}
   TimeSlider: {fileID: 1851266252}
@@ -924,7 +921,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: mainScene
+          m_StringArgument: Main
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
