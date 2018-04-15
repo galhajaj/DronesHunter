@@ -33,8 +33,9 @@ public class DebugButtons : MonoBehaviour
     {
         foreach (GameObject levelButton in GameObject.FindGameObjectsWithTag("LevelButtonTag"))
         {
-            string title = levelButton.GetComponent<LevelButton>().Title;
-            PlayerPrefs.SetFloat(title + "BestScore", 0.0F);
+            int levelNumber = levelButton.GetComponent<LevelButton>().LevelData.LevelNumber;
+            DataManager.Instance.SetLevelBestScore(levelNumber, 0.0F);
+            DataManager.Instance.TopLevelUnlocked = 0;
             SceneManager.LoadScene("mainScene");
         }
     }
@@ -43,8 +44,8 @@ public class DebugButtons : MonoBehaviour
     {
         foreach (GameObject levelButton in GameObject.FindGameObjectsWithTag("LevelButtonTag"))
         {
-            string title = levelButton.GetComponent<LevelButton>().Title;
-            PlayerPrefs.SetFloat(title + "BestScore", 5.0F);
+            int levelNumber = levelButton.GetComponent<LevelButton>().LevelData.LevelNumber;
+            DataManager.Instance.SetLevelBestScore(levelNumber, 5.0F);
             SceneManager.LoadScene("mainScene");
         }
     }
@@ -53,8 +54,8 @@ public class DebugButtons : MonoBehaviour
     {
         foreach (GameObject levelButton in GameObject.FindGameObjectsWithTag("LevelButtonTag"))
         {
-            string title = levelButton.GetComponent<LevelButton>().Title;
-            PlayerPrefs.SetFloat(title + "BestScore", 8.51F);
+            int levelNumber = levelButton.GetComponent<LevelButton>().LevelData.LevelNumber;
+            DataManager.Instance.SetLevelBestScore(levelNumber, 8.51F);
             SceneManager.LoadScene("mainScene");
         }
     }
@@ -63,8 +64,8 @@ public class DebugButtons : MonoBehaviour
     {
         foreach (GameObject levelButton in GameObject.FindGameObjectsWithTag("LevelButtonTag"))
         {
-            string title = levelButton.GetComponent<LevelButton>().Title;
-            PlayerPrefs.SetFloat(title + "BestScore", 10.0F);
+            int levelNumber = levelButton.GetComponent<LevelButton>().LevelData.LevelNumber;
+            DataManager.Instance.SetLevelBestScore(levelNumber, 10.0F);
             SceneManager.LoadScene("mainScene");
         }
     }
@@ -72,5 +73,10 @@ public class DebugButtons : MonoBehaviour
     public void AddAmmo()
     {
         DataManager.Instance.Ammo += 15;
+    }
+
+    public void AddGold()
+    {
+        DataManager.Instance.Gold += 100;
     }
 }

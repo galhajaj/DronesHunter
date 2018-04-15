@@ -14,7 +14,7 @@ public class HandleTimeSlider : MonoBehaviour
     // ================================================================================== //
     void Start () 
     {
-        TimeSlider.value = 10.0F;// + PlayerPrefs.GetFloat("TimeBonus");
+        TimeSlider.value = 10.0F;
 	}
     // ================================================================================== //
 	void Update () 
@@ -34,12 +34,11 @@ public class HandleTimeSlider : MonoBehaviour
             FireButton.GetComponent<Image>().color = Color.black;
 
             // handle score
-            string levelType = PlayerPrefs.GetString("LevelType");
             float score = (float)(Convert.ToDouble(ScoreText.text.Split(':')[1].Trim('%').Trim()) / 10.0F);
-            if (PlayerPrefs.GetFloat(levelType + "BestScore") < score)
+            if (DataManager.Instance.CurrentLevelBestScore < score)
             {
                 BestScoreParticles.SetActive(true);
-                PlayerPrefs.SetFloat(levelType + "BestScore", score);
+                DataManager.Instance.CurrentLevelBestScore = score;
 
                 // pass level
                 if (score >= Consts.Instance.SCORE_TO_PASS_LEVEL)

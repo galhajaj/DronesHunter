@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 61153930354631452}
   - component: {fileID: 50487153699066570}
   - component: {fileID: 114111778387440200}
-  - component: {fileID: 114440263157909734}
   m_Layer: 8
   m_Name: PooglyDrone
   m_TagString: DroneTag
@@ -113,19 +112,6 @@ MonoBehaviour:
   _isFloating: 1
   _floatingAmplitude: 0.005
   _floatingFrequency: 0.5
---- !u!114 &114440263157909734
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1961696511864074}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79a0db3c7d2fdab4ab1841d1b9c9f31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amplitude: 0.005
-  frequency: 0.5
 --- !u!212 &212959753018755778
 SpriteRenderer:
   m_ObjectHideFlags: 1

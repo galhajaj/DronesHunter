@@ -21,8 +21,7 @@ void Update ()
         ScoreText.text = "Score: " + (_score * 10.0F).ToString("F1")+"%";
 
         // change color of text
-        string levelType = PlayerPrefs.GetString("LevelType");
-        if (PlayerPrefs.GetFloat(levelType + "BestScore") <= _score)
+        if (DataManager.Instance.CurrentLevelBestScore <= _score)
         {
             ScoreText.color = Color.yellow;
         }

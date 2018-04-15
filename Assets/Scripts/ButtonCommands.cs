@@ -8,9 +8,4 @@ public class ButtonCommands : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
-
-    public void SetLevelType(string levelType)
-    {
-        PlayerPrefs.SetString("LevelType", levelType);
-    }
 }

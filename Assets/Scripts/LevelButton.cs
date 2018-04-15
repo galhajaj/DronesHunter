@@ -8,8 +8,6 @@ public class LevelButton : MonoBehaviour
 {
     public LevelData LevelData;
 
-    public string Title = "";
-    public string Prerequisite = "";
     public Sprite LockLevelSprite;
 
     private Text _textScore;
@@ -26,22 +24,17 @@ public class LevelButton : MonoBehaviour
         _textScore = transform.Find("TextScore").GetComponent<Text>();
         _textTitle = transform.Find("TextTitle").GetComponent<Text>();
 
-        Title = _textTitle.text;
-        _score = PlayerPrefs.GetFloat(Title + "BestScore");
+        _score = DataManager.Instance.GetLevelBestScore(LevelData.LevelNumber);
         
         // if prerequisite not met
-        if (LevelData.LevelNumber > DataManager.Instance.TopLevelUnlocked + 1/*Prerequisite != ""*/)
+        if (LevelData.LevelNumber > DataManager.Instance.TopLevelUnlocked + 1)
         {
-            //float scoreOfPrerequisite = PlayerPrefs.GetFloat(Prerequisite + "BestScore");
-            //if (scoreOfPrerequisite < 5.0F)
-            {
-                GetComponent<Button>().enabled = false;
-                GetComponent<Image>().sprite = LockLevelSprite;
-                this.transform.Find("ImageIcon").GetComponent<Image>().enabled = false;
-                _textTitle.text = "???";
-                _textScore.text = "";
-                return;
-            }
+            GetComponent<Button>().enabled = false;
+            GetComponent<Image>().sprite = LockLevelSprite;
+            this.transform.Find("ImageIcon").GetComponent<Image>().enabled = false;
+            _textTitle.text = "???";
+            _textScore.text = "";
+            return;
         }
 
         TotalScore.Instance.AddToScore(_score);
@@ -63,8 +56,6 @@ public class LevelButton : MonoBehaviour
     public void StartLevel()
     {
         DataManager.Instance.CurrentLevelData = LevelData;
-
-        PlayerPrefs.SetString("LevelType", Title);
         SceneManager.LoadScene("huntScene");
     }
 }
